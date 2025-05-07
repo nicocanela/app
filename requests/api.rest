@@ -17,3 +17,15 @@ Content-Type: application/json
     "name": "Jorge",
     "number": "12345"
 }
+
+###
+GET https://app-enrq.onrender.com/api/persons/4
+
+###
+POST https://app-enrq.onrender.com/api/persons
+Content-Type: application/json
+
+{
+    "name": "Jorge",
+    "number": "12345"
+}

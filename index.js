@@ -3,7 +3,6 @@ const morgan = require('morgan')
 const cors = require('cors')
 const app = express()
 
-app.use(cors())
 
 morgan.token('fullstack', function (req, res) {
     if (req.method === 'POST') {
@@ -15,6 +14,7 @@ morgan.token('fullstack', function (req, res) {
 
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :fullstack'))
 app.use(express.json())
+app.use(express.static('dist'))
 
 let persons =
 [
